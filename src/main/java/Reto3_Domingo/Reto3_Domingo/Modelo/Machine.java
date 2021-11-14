@@ -1,4 +1,4 @@
-package Reto3_Domingo.Reto3_Domingo;
+package Reto3_Domingo.Reto3_Domingo.Modelo;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.io.Serializable;
@@ -17,7 +17,7 @@ import javax.persistence.Table;
 @Table(name = "machine")
 public class Machine implements Serializable{
     @Id
-    @GeneratedValue (strategy =GenerationType.IDENTITY)
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
     
     private Integer idMachine;
     private String brand;
@@ -30,13 +30,13 @@ public class Machine implements Serializable{
     @JsonIgnoreProperties("category")
     private Categoria category;
     
-    /*@OneToMany(cascade = {CascadeType.PERSIST},mappedBy="machine")
+    @OneToMany(cascade = {CascadeType.PERSIST},mappedBy="machine")
     @JsonIgnoreProperties("machine")
     private List<Mensaje>  message; 
     
     @OneToMany(cascade = {CascadeType.PERSIST},mappedBy="machine")
     @JsonIgnoreProperties("machine")
-    private List<Reservacion>  reservation;*/
+    private List<Reservacion>  reservation;
 
     public Integer getIdMachine() {
         return idMachine;
@@ -86,7 +86,7 @@ public class Machine implements Serializable{
         this.category = category;
     }
 
-   /*public List<Mensaje> getMessage() {
+   public List<Mensaje> getMessage() {
         return message;
     }
 
@@ -99,10 +99,10 @@ public class Machine implements Serializable{
     }
 
     public void setReservation(List<Reservacion> reservation) {
-        this.reservation = reservation;*/
+        this.reservation = reservation;
     }
 
-    
+}
 
     
-}
+

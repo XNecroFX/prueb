@@ -1,6 +1,7 @@
+package Reto3_Domingo.Reto3_Domingo.Repositorio;
 
-package Reto3_Domingo.Reto3_Domingo;
-
+import Reto3_Domingo.Reto3_Domingo.Interface.InterfaceMachine;
+import Reto3_Domingo.Reto3_Domingo.Modelo.Machine;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,10 +15,10 @@ public class RepositorioMachine {
     public List<Machine> getAll(){
         return (List<Machine>) crud.findAll();
     }
-    public Optional <Machine> getGym(int id){
+    public Optional <Machine> getMachine(int id){
         return crud.findById(id);
     }
-    public Machine save(Machine gym){
-        return crud.save(gym);
+    public Machine save(Machine machine){
+        return crud.save(machine);
     }
 }

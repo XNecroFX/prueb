@@ -1,6 +1,8 @@
 
-package Reto3_Domingo.Reto3_Domingo;
+package Reto3_Domingo.Reto3_Domingo.Servicio;
 
+import Reto3_Domingo.Reto3_Domingo.Repositorio.RepositorioCategoria;
+import Reto3_Domingo.Reto3_Domingo.Modelo.Categoria;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;

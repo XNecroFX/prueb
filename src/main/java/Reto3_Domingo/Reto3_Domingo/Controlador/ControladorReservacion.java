@@ -1,6 +1,8 @@
 
-package Reto3_Domingo.Reto3_Domingo;
+package Reto3_Domingo.Reto3_Domingo.Controlador;
 
+import Reto3_Domingo.Reto3_Domingo.Modelo.Reservacion;
+import Reto3_Domingo.Reto3_Domingo.Servicio.ServiciosReservacion;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,22 +16,22 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/Category")
-public class ControladorCategoria {
+@RequestMapping("/api/Reservation")
+public class ControladorReservacion {
     @Autowired
-    private ServiciosCategoria servicios;
+    private ServiciosReservacion servicios;
     @GetMapping("/all")
-    public List<Categoria> getCategoria(){
+    public List<Reservacion> getReservacion(){
         return servicios.getAll();
     }
     @GetMapping("/{id}")
-    public Optional<Categoria> getCategoria (@PathVariable("id") int idCategoria) {
-        return servicios.getCategoria(idCategoria);
+    public Optional<Reservacion> getReservacion (@PathVariable("id") int idReservacion) {
+        return servicios.getReservacion(idReservacion);
     }
     
     @PostMapping("/save")
     @ResponseStatus(HttpStatus.CREATED)
-    public Categoria save(@RequestBody Categoria categoria){
-        return servicios.save(categoria);
+    public Reservacion save(@RequestBody Reservacion reservacion){
+        return servicios.save(reservacion);
     }
 }

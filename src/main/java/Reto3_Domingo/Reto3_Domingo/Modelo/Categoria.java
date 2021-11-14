@@ -1,6 +1,6 @@
+package Reto3_Domingo.Reto3_Domingo.Modelo;
 
-package Reto3_Domingo.Reto3_Domingo;
-
+import Reto3_Domingo.Reto3_Domingo.Modelo.Machine;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.io.Serializable;
 import java.util.List;
